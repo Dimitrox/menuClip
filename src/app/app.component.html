@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon (click)="opened=!opened;">menu</mat-icon>
+  </button>
+  <span class="title"><a routerLink="/">Clip Money</a></span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container"> 
+  
+  <!-- Inside -->
+
+  <mat-sidenav class="sidenav-inside" [(opened)]="opened">  
+    
+    <mat-list>
+
+      <div matRipple>
+        <mat-card>
+          <mat-list-item>
+            <a routerLink="/transferencia">
+            Transferencia
+            </a>
+          </mat-list-item>
+        </mat-card>
+      </div>
+     
+      <div matRipple>
+        <mat-card>
+          <mat-list-item> Pepper </mat-list-item>
+        </mat-card>  
+      </div>
+      
+      <div matRipple>
+        <mat-card>
+          <mat-list-item> Salt </mat-list-item>
+        </mat-card>
+      </div>
+      
+      <div matRipple>
+        <mat-card>
+          <mat-list-item> Paprika </mat-list-item>
+        </mat-card>
+      </div>
+
+    </mat-list>
+
+  </mat-sidenav>
+  
+  <!-- Main content -->
+
+  <mat-sidenav-content>
+  
+    <!-- Router outlet-->
+    
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
